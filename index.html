@@ -1,32 +1,52 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="src/output.css" />
-  </head>
-  <body>
-    <nav class="bg-purple-700 text-white flex md:justify-between flex-col md:flex-row min-h-5 items-center">
-      <div class="logo mx-auto md:mx-0">
-        Shubhra
-      </div>
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shubhra | Tailwind Showcase</title>
+  <link rel="stylesheet" href="src/output.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 to-pink-100 text-gray-800 font-sans">
 
-      <ul class="flex space-x-3 justify-center md:justify-normal">
-        <li>Home</li>
-        <li>About</li>
-        <li>Contact</li>
+  
+  <nav class="bg-purple-700 text-white shadow-md">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="text-2xl font-bold">Shubhra</div>
+      
+      
+      <button id="menu-btn" class="block md:hidden focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <ul id="menu" class="hidden md:flex space-x-6">
+        <li><a href="#" class="hover:text-pink-300 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-pink-300 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-pink-300 transition">Contact</a></li>
       </ul>
-        
+    </div>
 
-    </nav>
-
-    <main>
-
-    </main>
     
-    <footer>
+    <ul id="mobile-menu" class="md:hidden bg-purple-600 px-6 pb-4 space-y-3 hidden">
+      <li><a href="#" class="block py-2 hover:text-pink-300 transition">Home</a></li>
+      <li><a href="#about" class="block py-2 hover:text-pink-300 transition">About</a></li>
+      <li><a href="#contact" class="block py-2 hover:text-pink-300 transition">Contact</a></li>
+    </ul>
+  </nav>
 
-    </footer>
-  </body>
+  
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+</body>
 </html>
