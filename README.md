@@ -59,7 +59,7 @@ Then open `http://localhost:8000` in your browser.
 ## 📸 Screenshots
 
 ![App Screenshot](assets/ss1.png)
-![App Screenshot](assets/ss2.png)
+![App Screenshot](assets/ss3.png)
 
 ## ✨ Author
 
